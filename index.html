@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Roland-Morris Score Calculator</title>
+	<style>
+		@font-face{
+			font-family: 'Source Code Pro';
+			font-weight: 300;
+			font-style: normal;
+			font-stretch: normal;
+			src: url('./WOFF2/TTF/SourceCodePro-Light.ttf.woff2') format('woff2'),
+				url('./WOFF/OTF/SourceCodePro-Light.otf.woff') format('woff'),
+				url('./OTF/SourceCodePro-Light.otf') format('opentype'),
+				url('./TTF/SourceCodePro-Light.ttf') format('truetype');
+		}
+		/*
+		body {
+			margin: 0;
+		}
+
+		div {
+			width: 100vw;
+			height: 100vh;
+		}
+		*/
+
+		html {
+        background-color: rgb(208, 219, 233);
+      	}
+
+		h1 {
+		text-align: center;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		font-size: 40px;
+	
+		}
+
+		h2 {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			text-align: center;
+			font-size: 25px;
+		}
+
+		body {
+		margin: 0;
+		padding: 0;
+		}
+
+
+		form {
+		margin: 10px;
+		max-width: auto;
+		padding: 20px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		font-size: 30px;
+		background-color: rgb(224, 233, 246);
+        line-height: 2;
+		}
+
+		input {
+			font-size: 30px;
+		}
+
+		p {
+		margin-top: 10px;
+		margin-bottom: 10px;
+		}
+
+		input[type="radio"] {
+		margin-right: 10px;
+		transform: scale(1.5);
+		}
+
+		input[type="radio"]:last-child {
+		margin-right: 0;
+		}
+
+		button {
+			background-color: rgb(0, 145, 255);
+			color: white;
+
+			border: none;
+			border-radius: 25px;
+			cursor: pointer;
+			font-size: 30px;
+			display: block;
+			margin: 0 auto;
+		}
+
+		button[type="button"]:hover {
+		background-color: rgb(100, 182, 245);
+		}
+
+		.btn-primary {
+			/* padding: 23px 33px; */
+			padding: 20px 33px;
+			
+		}
+
+        .increase-font-size-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 9px 10px;
+		background-color: white;
+		color: black;
+        }
+
+		.decrease-font-size-btn{
+			position: absolute;
+			top: 10px;
+			right: 50px;
+			padding: 9px 10px;
+			background-color: white;
+			color: black;
+        }
+		
+		#result {
+		margin-top: 20px;
+		font-size: 30px;
+		font-weight: bold;
+		}
+
+
+
+	</style>
+	<script type="text/javascript">
+		function calculateQuickDASH() {
+			var values = document.getElementsByClassName("score");
+			var totalScore = 0;
+			var totalQuestions = 0;
+			for(var i = 0; i < values.length; i++) {
+				if(values[i].checked) {
+					totalScore += parseFloat(values[i].value);
+					totalQuestions++;
+				}
+			}
+
+            var quickDASHscore = totalScore;
+            document.getElementById("result").innerHTML = "請勿關閉此頁面，並將以下資料展示給物理治療師。<br> Your Total Score is: " + quickDASHscore ;
+				
+		}
+
+
+	</script>
+</head>
+<body>
+	<h1>盧倫摩理氏背痛問卷</h1>
+	<h2> 威爾斯親王醫院 物理治療部</h2>
+	<form>
+		<p>當背部痛楚或不適時，你或會發覺自己未能像以往般工作。
+            下列句子是一些患有背痛的人用來形容自己的，當你看到這些句子，你會發現其中一些適合形容你今日的情況，
+            當你發現句子恰當地形容你今日的情況，請選取選項，如句子不適用，則繼續下一句子。請緊記，只需要選取那些確切符合形容你今日情況的句子。</p>
+            <p> </p>
+			<input type="radio" name="section1" value="1" class="score"> 1. 因為腰背／下肢影響，我經常留在家中。
+            <br>
+			<input type="radio" name="section2" value="1" class="score"> 2. 我經常轉換姿勢，保持背部／下肢舒適。
+            <br>
+			<input type="radio" name="section3" value="1" class="score"> 3. 因為腰背／下肢影響，我走得比平常慢。
+            <br>
+			<input type="radio" name="section4" value="1" class="score"> 4. 因為腰背／下肢影響，我已停止做日常負責的家務。
+            <br>
+			<input type="radio" name="section5" value="1" class="score"> 5. 因為腰背／下肢影響，我上樓梯時要利用扶手。
+            <br>
+            <input type="radio" name="section6" value="1" class="score"> 6. 因為腰背／下肢影響，我比平常較多時間躺下休息。
+			<br>
+			<input type="radio" name="section7" value="1" class="score"> 7. 因為腰背／下肢影響，我需要扶著東西才能從梳化站起來。
+            <br>
+			<input type="radio" name="section8" value="1" class="score"> 8. 因為腰背／下肢影響，我嘗試請別人替我完成一些事情。
+            <br>
+			<input type="radio" name="section9" value="1" class="score"> 9. 因為腰背／下肢影響，我穿衣比平常緩慢
+            <br>
+			<input type="radio" name="section10" value="1" class="score"> 10. 因為腰背／下肢影響，我只可站立一段短時間。
+			<br>
+			<input type="radio" name="section11" value="1" class="score"> 11. 因為腰背／下肢影響，我避免彎腰或跪下。
+            <br>
+			<input type="radio" name="section12" value="1" class="score"> 12. 因為腰背／下肢影響，我坐在椅子上很難才能站起。
+            <br>
+			<input type="radio" name="section13" value="1" class="score"> 13. 我的腰背／下肢背部差不多每時每刻都痛楚。
+            <br>
+			<input type="radio" name="section14" value="1" class="score"> 14. 因為腰背／下肢影響，睡在床上，很難轉身。
+            <br>
+			<input type="radio" name="section15" value="1" class="score"> 15. 因為腰背／下肢痛，我的胃口不佳。
+            <br>
+            <input type="radio" name="section16" value="1" class="score"> 16. 因為腰背／下肢痛，穿襪子或襪褲時會有困難。
+			<br>
+			<input type="radio" name="section17" value="1" class="score"> 17. 因為腰背／下肢痛，我只能走一段短距離。
+            <br>
+			<input type="radio" name="section18" value="1" class="score"> 18. 因為腰背／下肢影響，我睡得不好。
+            <br>
+			<input type="radio" name="section19" value="1" class="score"> 19. 因為腰背／下肢痛，我需要別人協助穿衣服。
+            <br>
+			<input type="radio" name="section20" value="1" class="score"> 20. 因為腰背／下肢影響，我每天大部份時間都是坐著。
+            <br>
+			<input type="radio" name="section21" value="1" class="score"> 21. 因為腰背／下肢影響，我避免做家中粗重的工作。
+			<br>
+			<input type="radio" name="section22" value="1" class="score"> 22. 因為腰背／下肢痛，我的脾氣比平常差。
+            <br>
+			<input type="radio" name="section23" value="1" class="score"> 23. 因為腰背／下肢影響，我上樓梯比平常緩慢。
+            <br>
+			<input type="radio" name="section24" value="1" class="score"> 24. 因為腰背／下肢影響，我大部份時間睡在床。
+		<br>
+		<br>
+		<button type="button" class="btn-primary" onclick="calculateQuickDASH()">提交</button>
+		<div id="result"></div>
+	</form>
+</body>
+</html>
