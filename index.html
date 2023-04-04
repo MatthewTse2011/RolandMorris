@@ -141,25 +141,33 @@
 
             var quickDASHscore = totalScore;
             document.getElementById("result").innerHTML = "請勿關閉此頁面，並將以下資料展示給物理治療師。<br> Your Total Score is: " + quickDASHscore ;
-				
+
 		}
 
+        window.onload = function() {
+			var radios = document.getElementsByClassName("score");
+			for (var i = 0; i < radios.length; i++) {
+				radios[i].addEventListener("click", function() {
+					if (this.checked) {
+						for (var j = 0; j < radios.length; j++) {
+							if (radios[j] !== this) {
+								radios[j].checked = false;
+							}
+						}
+					}
+				});
+			}
+		};
 
 	</script>
 </head>
 <body>
-	<h1>盧倫摩理氏背痛問卷1</h1>
+	<h1>盧倫摩理氏背痛問卷</h1>
 	<h2> 威爾斯親王醫院 物理治療部</h2>
-    <form>
-        <input type="radio" id="option1" name="option" value="option1">
-        <label for="option1">Option 1</label><br>
-        <input type="radio" id="option2" name="option" value="option2">
-        <label for="option2">Option 2</label><br>
-        <input type="radio" id="none" name="option" value="">
-        <label for="none">None</label><br>
-      </form>
-      
 	<form>
+        <script>
+         
+        </script>
 		<p>當背部痛楚或不適時，你或會發覺自己未能像以往般工作。
             下列句子是一些患有背痛的人用來形容自己的，當你看到這些句子，你會發現其中一些適合形容你今日的情況，
             當你發現句子恰當地形容你今日的情況，請選取選項，如句子不適用，則繼續下一句子。請緊記，只需要選取那些確切符合形容你今日情況的句子。</p>
