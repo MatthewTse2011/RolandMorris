@@ -78,6 +78,11 @@
 		margin-right: 0;
 		}
 
+        input[type="checkbox"] {
+		margin-right: 10px;
+		transform: scale(1.5);
+		}
+
 		button {
 			background-color: rgb(0, 145, 255);
 			color: white;
@@ -144,76 +149,90 @@
 
 		}
 
+        
+
+        /*
         function radioClick(clickedRadio) {
+
             var radios = document.getElementsByName(clickedRadio.name);
+            if (radio.checked) {
+                // radio button is currently selected, unselect it
+                radio.checked = false;
+            } else {
+                // radio button is currently unselected, select it
+                radio.checked = true;
+            }
+            /*
             for (var i = 0; i < radios.length; i++) {
                 if (radios[i] !== clickedRadio) {
                 radios[i].checked = false;
                 }
             }
+            
         }
+        */
 
 
 	</script>
 </head>
 <body>
-	<h1>盧倫摩理氏背痛問卷1</h1>
+	<h1>盧倫摩理氏背痛問卷</h1>
 	<h2> 威爾斯親王醫院 物理治療部</h2>
 	<form>
         <script>
-         
+           
         </script>
 		<p>當背部痛楚或不適時，你或會發覺自己未能像以往般工作。
             下列句子是一些患有背痛的人用來形容自己的，當你看到這些句子，你會發現其中一些適合形容你今日的情況，
-            當你發現句子恰當地形容你今日的情況，請選取選項，如句子不適用，則繼續下一句子。請緊記，只需要選取那些確切符合形容你今日情況的句子。</p>
+            當你發現句子恰當地形容你今日的情況，請加上✔號，如句子不適用，則繼續下一句子。請緊記，只需要✔上那些確切符合形容你今日情況的句子。</p>
             <p> </p>
-			<input type="radio" name="section1" value="1" onclick="radioClick(this)" class="score"> 1. 因為腰背／下肢影響，我經常留在家中。
+			<input type="checkbox" name="section1" value="1" onclick="radioClick(name)" class="score"> 1. 因為腰背／下肢影響，我經常留在家中。
             <br>
-			<input type="radio" name="section2" value="1" class="score"> 2. 我經常轉換姿勢，保持背部／下肢舒適。
+			<input type="checkbox" name="section2" value="1" class="score"> 2. 我經常轉換姿勢，保持背部／下肢舒適。
             <br>
-			<input type="radio" name="section3" value="1" class="score"> 3. 因為腰背／下肢影響，我走得比平常慢。
+			<input type="checkbox" name="section3" value="1" class="score"> 3. 因為腰背／下肢影響，我走得比平常慢。
             <br>
-			<input type="radio" name="section4" value="1" class="score"> 4. 因為腰背／下肢影響，我已停止做日常負責的家務。
+			<input type="checkbox" name="section4" value="1" class="score"> 4. 因為腰背／下肢影響，我已停止做日常負責的家務。
             <br>
-			<input type="radio" name="section5" value="1" class="score"> 5. 因為腰背／下肢影響，我上樓梯時要利用扶手。
+			<input type="checkbox" name="section5" value="1" class="score"> 5. 因為腰背／下肢影響，我上樓梯時要利用扶手。
             <br>
-            <input type="radio" name="section6" value="1" class="score"> 6. 因為腰背／下肢影響，我比平常較多時間躺下休息。
+            <input type="checkbox" name="section6" value="1" class="score"> 6. 因為腰背／下肢影響，我比平常較多時間躺下休息。
 			<br>
-			<input type="radio" name="section7" value="1" class="score"> 7. 因為腰背／下肢影響，我需要扶著東西才能從梳化站起來。
+			<input type="checkbox" name="section7" value="1" class="score"> 7. 因為腰背／下肢影響，我需要扶著東西才能從梳化站起來。
             <br>
-			<input type="radio" name="section8" value="1" class="score"> 8. 因為腰背／下肢影響，我嘗試請別人替我完成一些事情。
+			<input type="checkbox" name="section8" value="1" class="score"> 8. 因為腰背／下肢影響，我嘗試請別人替我完成一些事情。
             <br>
-			<input type="radio" name="section9" value="1" class="score"> 9. 因為腰背／下肢影響，我穿衣比平常緩慢
+			<input type="checkbox" name="section9" value="1" class="score"> 9. 因為腰背／下肢影響，我穿衣比平常緩慢
             <br>
-			<input type="radio" name="section10" value="1" class="score"> 10. 因為腰背／下肢影響，我只可站立一段短時間。
+			<input type="checkbox" name="section10" value="1" class="score"> 10. 因為腰背／下肢影響，我只可站立一段短時間。
 			<br>
-			<input type="radio" name="section11" value="1" class="score"> 11. 因為腰背／下肢影響，我避免彎腰或跪下。
+			<input type="checkbox" name="section11" value="1" class="score"> 11. 因為腰背／下肢影響，我避免彎腰或跪下。
             <br>
-			<input type="radio" name="section12" value="1" class="score"> 12. 因為腰背／下肢影響，我坐在椅子上很難才能站起。
+			<input type="checkbox" name="section12" value="1" class="score"> 12. 因為腰背／下肢影響，我坐在椅子上很難才能站起。
             <br>
-			<input type="radio" name="section13" value="1" class="score"> 13. 我的腰背／下肢背部差不多每時每刻都痛楚。
+			<input type="checkbox" name="section13" value="1" class="score"> 13. 我的腰背／下肢背部差不多每時每刻都痛楚。
             <br>
-			<input type="radio" name="section14" value="1" class="score"> 14. 因為腰背／下肢影響，睡在床上，很難轉身。
+			<input type="checkbox" name="section14" value="1" class="score"> 14. 因為腰背／下肢影響，睡在床上，很難轉身。
             <br>
-			<input type="radio" name="section15" value="1" class="score"> 15. 因為腰背／下肢痛，我的胃口不佳。
+			<input type="checkbox" name="section15" value="1" class="score"> 15. 因為腰背／下肢痛，我的胃口不佳。
             <br>
-            <input type="radio" name="section16" value="1" class="score"> 16. 因為腰背／下肢痛，穿襪子或襪褲時會有困難。
+            <input type="checkbox" name="section16" value="1" class="score"> 16. 因為腰背／下肢痛，穿襪子或襪褲時會有困難。
 			<br>
-			<input type="radio" name="section17" value="1" class="score"> 17. 因為腰背／下肢痛，我只能走一段短距離。
+			<input type="checkbox" name="section17" value="1" class="score"> 17. 因為腰背／下肢痛，我只能走一段短距離。
             <br>
-			<input type="radio" name="section18" value="1" class="score"> 18. 因為腰背／下肢影響，我睡得不好。
+			<input type="checkbox" name="section18" value="1" class="score"> 18. 因為腰背／下肢影響，我睡得不好。
             <br>
-			<input type="radio" name="section19" value="1" class="score"> 19. 因為腰背／下肢痛，我需要別人協助穿衣服。
+			<input type="checkbox" name="section19" value="1" class="score"> 19. 因為腰背／下肢痛，我需要別人協助穿衣服。
             <br>
-			<input type="radio" name="section20" value="1" class="score"> 20. 因為腰背／下肢影響，我每天大部份時間都是坐著。
+			<input type="checkbox" name="section20" value="1" class="score"> 20. 因為腰背／下肢影響，我每天大部份時間都是坐著。
             <br>
-			<input type="radio" name="section21" value="1" class="score"> 21. 因為腰背／下肢影響，我避免做家中粗重的工作。
+			<input type="checkbox" name="section21" value="1" class="score"> 21. 因為腰背／下肢影響，我避免做家中粗重的工作。
 			<br>
-			<input type="radio" name="section22" value="1" class="score"> 22. 因為腰背／下肢痛，我的脾氣比平常差。
+			<input type="checkbox" name="section22" value="1" class="score"> 22. 因為腰背／下肢痛，我的脾氣比平常差。
             <br>
-			<input type="radio" name="section23" value="1" class="score"> 23. 因為腰背／下肢影響，我上樓梯比平常緩慢。
+			<input type="checkbox" name="section23" value="1" class="score"> 23. 因為腰背／下肢影響，我上樓梯比平常緩慢。
             <br>
-			<input type="radio" name="section24" value="1" class="score"> 24. 因為腰背／下肢影響，我大部份時間睡在床。
+			<input type="checkbox" name="section24" value="1" class="score"> 24. 因為腰背／下肢影響，我大部份時間睡在床。
 		<br>
 		<br>
 		<button type="button" class="btn-primary" onclick="calculateQuickDASH()">提交</button>
